@@ -32,7 +32,7 @@ Cypress.Commands.add('fillTableWithJsonData', (jsonData) => {
     cy.get('#refreshtable').click();
   });
   
-  Cypress.Commands.add('assertTableDataByColumnName', (columnName) => {
+  Cypress.Commands.add('assertTableDataByColumnName', ( jsonData, columnName) => {
     // Define a mapping of column names to their respective indices
     const columnIndexMap = {
       name: 1,
